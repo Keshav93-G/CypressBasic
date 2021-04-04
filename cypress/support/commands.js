@@ -24,17 +24,17 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-Cypress.Commands.add('ClearAndType',()=>{
-    cy.get('').clear()
-    cy.get('').type('abc')
-    //cy.get('').clear('').type()
+Cypress.Commands.add('ClearAndType',(text)=>{
+    cy.get().clearAndType(text)
     })
 
-Cypress.Commands.add('Login',(username,password)=>{
+Cypress.Commands.add('Login',(email,password)=>{
 
 
-    cy.wait(1000)
-    cy.get('fieldset>input[type="email"]').type(username)
-    cy.wait(1000)
+    cy.get('ul>li:nth-child(2)').should('have.text','Sign in').click()
+    cy.wait(2000)
+    cy.get('fieldset>input[type="email"]').type(email)
+    cy.wait(2000)
     cy.get('fieldset>input[type="password"]').type(password)
+    cy.get('button').click()
 })  
