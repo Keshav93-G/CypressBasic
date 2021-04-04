@@ -1,9 +1,1 @@
-{
-    "baseurl":"http://react-redux.realworld.io/",
-    "responseTimeout": 80000,
-    "screenshotsFolder": "cypress/screenshots",    
-    "video": false,
-    "viewportWidth": 1280,
-    "viewportHeight": 720
-    
-}
+{}
