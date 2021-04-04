@@ -1,5 +1,5 @@
 before('Login to the app',()=>{
-    cy.visit('http://react-redux.realworld.io/')
+    cy.visit(Cypress.config().baseurl)
         .wait(1000)
     var email = Cypress.env("email");
     var password = Cypress.env("password")
