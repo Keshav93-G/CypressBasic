@@ -3,6 +3,7 @@ Cypress.Commands.add('clearAndType', {
   }, (subject, text) => {
     return cy.get(subject)
         .clear()
-        .wait(2000)
+        .wait(1000)
         .type(text)
+        .wait(1000)
 })
